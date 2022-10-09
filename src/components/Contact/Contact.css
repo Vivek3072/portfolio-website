@@ -1,0 +1,80 @@
+.contact_page {
+  height: fit-content;
+}
+.contact_form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactPageRight {
+  width: 50vw;
+  background-color: #141414;
+  padding: 1rem 2.5rem;
+}
+
+.successImage img {
+  width: 55%;
+}
+
+input,
+textarea {
+  width: 95%;
+}
+
+.feedbackForm p {
+  color: red;
+  font-size: 12px;
+  float: left;
+}
+
+.errorMessage {
+  margin-left: 15px;
+  height: 30px;
+}
+
+input,
+textarea {
+  background: none;
+  border: none;
+  border-bottom: 2px solid rgb(216, 216, 216);
+  color: white;
+  padding: 5px;
+}
+
+input:focus {
+  border-bottom: 2px solid rgb(216, 216, 216);
+  outline: none;
+}
+textarea:focus {
+  border-bottom: 2px solid rgb(216, 216, 216);
+  outline: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .successImage img {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .contactPageRight {
+    width: 85vw;
+    padding: 1rem 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 450px) and (min-width: 320px) {
+  .successImage img {
+    width: 270px;
+  }
+  input,
+  textarea {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 780px) and (min-width: 450px) {
+  .contactPageRight {
+    width: 70vw;
+    padding: 1rem 2.5rem;
+  }
+}

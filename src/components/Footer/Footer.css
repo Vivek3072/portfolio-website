@@ -1,0 +1,90 @@
+.footer {
+  background-image: url("../../Assets/Wave.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+  padding-top: 5rem;
+  margin-top: 5rem;
+  position: relative;
+}
+
+.footer_body {
+  margin: 2rem 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer_top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.footer_logo img {
+  width: 200px;
+}
+.footer_links a {
+  color: rgb(218, 218, 218);
+  font-size: 25px;
+  text-decoration: none;
+  margin: 3px;
+}
+
+.footer_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding-top: 1rem;
+  border-top: 1px solid #474747;
+}
+.footer_name {
+  color: #eee;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #2ca58d;
+  margin: 5px;
+}
+.footer_name:hover {
+  background-color: #1b9980;
+  padding: 5px 10px;
+  transform: rotate(-3deg);
+}
+
+.footer_linkedin:hover {
+  color: #0072b1;
+}
+
+.footer_insta:hover {
+  color: #cc2366;
+}
+
+.footer_twitter:hover {
+  color: #1da1f2;
+}
+
+.footer_github {
+  color: #eee;
+}
+.footer_github:hover {
+  color: #fff;
+}
+
+@media only screen and (max-width: 650px) {
+  .footer_logo img {
+    width: 150px;
+  }
+  .footer_bottom {
+    flex-direction: column;
+  }
+  .footer_links a {
+    font-size: 23px;
+  }
+}

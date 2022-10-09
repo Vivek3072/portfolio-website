@@ -1,0 +1,75 @@
+.about_right {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-top: 3rem;
+}
+
+.vivekPic {
+  width: 250px;
+  height: 250px;
+  background-size: 250px;
+  border: 5px solid #1e1d1d;
+  box-shadow: 0px 15px 20px 0px #00000040;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(37, 37, 37) 50%,
+    #222121,
+    #232323 33%
+  );
+  border-radius: 50%;
+  animation: 1.5s shine linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -100%;
+  }
+}
+
+.curve {
+  width: 150px;
+  border-radius: 80%;
+  height: 10px;
+  background-color: #141414;
+}
+@media only screen and (max-width: 1024px) {
+  .skill_set {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .skill_set {
+    width: 95%;
+  }
+
+  .skill img {
+    width: 60px;
+  }
+}
+
+@media only screen and (max-width: 450px) and (min-width: 320px) {
+  .about_left {
+    order: 2;
+  }
+  .about_right {
+    order: 1;
+    margin: 0;
+  }
+  .skill_set {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 780px) and (min-width: 450px) {
+  .skill_set {
+    width: 85%;
+  }
+
+  .skill img {
+    width: 60px;
+  }
+}

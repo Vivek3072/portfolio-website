@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from "./components/HomePage/Home";
+import About from "./components/About/About";
+import Navbar from "./components/Navbar/Navbar";
+import Contact from "./components/Contact/Contact";
+import "./components/style.css";
+import ProjectPage from "./components/Projects/ProjectPage";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
+  document.body.style.backgroundColor = "#242424";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+      <Navbar />
+        <Routes>
+          <Route index element={<Home />} />
+          <Route exact path="/" element={<Home />} />
+            <Route path="/About" element={<About />} />
+            <Route path="/Project" element={<ProjectPage />} />
+            <Route path="/Contact" element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
