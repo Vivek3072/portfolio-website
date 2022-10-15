@@ -7,6 +7,7 @@ import HTML from '../../../src/Assets/Skills/HTML.svg'
 import CSS from '../../../src/Assets/Skills/CSS.svg'
 import Javascript from '../../../src/Assets/Skills/Javascript.svg'
 import Figma from '../../../src/Assets/Skills/Figma.svg'
+import Guitar from '../../../src/Assets/Skills/Guitar.svg'
 import Bootstrap from '../../../src/Assets/Skills/Bootstrap.svg'
 import MongoDB from '../../../src/Assets/Skills/MongoDB.svg'
 import Github from '../../../src/Assets/Skills/Github.svg'
@@ -63,6 +64,9 @@ export default function Skills() {
        </div>
        <div className="skill">
       <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer" > <img src={TailwindCss} alt="TailwindCss" /></a>
+       </div>
+       <div className="skill">
+      <a href="https://youtu.be/vpOFHXMJGHU" target="_blank" rel="noreferrer" > <img src={Guitar} alt="Guitar" /></a>
        </div>
        <div className="skill">
       <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer" > <img src={MongoDB} alt="MongoDB" /></a>

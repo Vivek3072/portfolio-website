@@ -3,7 +3,7 @@
   justify-content: flex-start;
   flex-direction: column;
   padding-left: 5rem;
-  padding-top: 5rem;
+  padding-top: 6rem;
 }
 .title1 {
   color: #50d890;
@@ -31,6 +31,10 @@
   -webkit-text-fill-color: transparent;
 }
 
+.about_me{
+  width: 60%;
+  color: #cacaca;
+}
 .view_works_link {
   width: fit-content;
   text-decoration: none;
@@ -125,7 +129,24 @@
     transform: translate(0);
   }
 }
-@media only screen and (max-width: 450px) and (min-width: 320px) {
+@media only screen and (max-width: 780px)  {
+  .homePageSocialMedia {
+    position: absolute;
+    bottom: 100px;
+    right: 5px;
+    font-size: 20px;
+  }
+
+  .homePageText {
+    padding-left: 2rem;
+    padding-top: 3rem;
+  }
+  .about_me{
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 450px)  {
   .homePageText {
     padding-left: 2rem;
     padding-top: 3rem;
@@ -145,19 +166,9 @@
     bottom: 100px;
     right: 5px;
     font-size: 20px;
-  }
-}
-
-@media only screen and (max-width: 780px) and (min-width: 450px) {
-  .homePageSocialMedia {
-    position: absolute;
-    bottom: 100px;
-    right: 5px;
-    font-size: 20px;
-  }
-
-  .homePageText {
-    padding-left: 2rem;
-    padding-top: 3rem;
+  } 
+   .about_me{
+    width: 90%;
+    font-size: 15px;
   }
 }

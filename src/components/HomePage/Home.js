@@ -33,6 +33,9 @@ export default function Home() {
               />
             </div>
 
+              <div className="about_me p-1">
+                A passionate and dedicated individual , up for works and services as web developer and an UI/UX designer . Looking forward to be a full-stack developer . 
+              </div>
             <Link to="/project" className="view_works_link">
               <div className="border_button mt-3">View Works <span className="rarr"> &rarr; </span> </div>
             </Link>
