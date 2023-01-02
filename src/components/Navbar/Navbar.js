@@ -1,38 +1,69 @@
 import React, { useState } from "react";
+import "./Navbar.css";
+import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import Logo from "../../Assets/Logo.svg";
-import "./Navbar.css";
 
 export default function Navbar() {
-  const [activeNav, setActiveNav] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <>
-      <nav className="container">
-        <Link to="/">
-          <div className="logo">
-            <img src={Logo} alt="LOGO" />{" "}
+      <nav>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <div className="nav-logo">
+            <img src={Logo} alt="My LOGO" className="mx-1" />
           </div>
         </Link>
-        <ul>
-          <li
-            onClick={() => setActiveNav(true)}
-            className={activeNav === true ? "activeNav" : "disableNav"}
-          >
-            <Link to="/">Home</Link>{" "}
-          </li>
-          <li
-            onClick={() => setActiveNav(true)}
-            className={activeNav === true ? "activeNav" : "disableNav"}
-          >
-            <Link to="/About">About</Link>{" "}
-          </li>
-          <li
-            onClick={() => setActiveNav(true)}
-            className={activeNav === true ? "activeNav" : "disableNav"}
-          >
-            <Link to="/Project">Projects</Link>{" "}
-          </li>
-        </ul>
+
+        <div className={isExpanded ? "nav-menu expanded" : "nav-menu"}>
+          <div className="d-flex flex-row justify-content-center align-items-center">
+            <div className="triangle-left"></div>
+            <Link
+              to="/"
+              className="nav-menu-item shadow my-1"
+              onClick={() => {
+                setIsExpanded(!isExpanded);
+              }}
+            >
+              Home
+            </Link>
+          </div>
+
+          <div className="d-flex flex-row justify-content-center align-items-center">
+            <div className="triangle-left"></div>
+            <Link
+              to="/About"
+              className="nav-menu-item shadow my-1"
+              onClick={() => {
+                setIsExpanded(!isExpanded);
+              }}
+            >
+              About
+            </Link>
+          </div>
+
+          <div className="d-flex flex-row justify-content-center align-items-center">
+            <div className="triangle-left"></div>
+            <Link
+              to="/Project"
+              className="nav-menu-item shadow my-1"
+              onClick={() => {
+                setIsExpanded(!isExpanded);
+              }}
+            >
+              Projects
+            </Link>
+          </div>
+        </div>
+        <div
+          className="nav-btns fs-3"
+          onClick={() => {
+            setIsExpanded(!isExpanded);
+          }}
+        >
+          {!isExpanded ? <HiMenuAlt3 /> : <HiX />}
+        </div>
       </nav>
     </>
   );
