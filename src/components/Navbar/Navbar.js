@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav>
+      <nav className={isExpanded ? "expanded" : ""}>
         <Link to="/" style={{ textDecoration: "none" }}>
           <div className="nav-logo">
             <img src={Logo} alt="My LOGO" className="mx-1" />
@@ -18,7 +18,6 @@ export default function Navbar() {
 
         <div className={isExpanded ? "nav-menu expanded" : "nav-menu"}>
           <div className="d-flex flex-row justify-content-center align-items-center">
-            <div className="triangle-left"></div>
             <Link
               to="/"
               className="nav-menu-item shadow my-1"
@@ -31,7 +30,6 @@ export default function Navbar() {
           </div>
 
           <div className="d-flex flex-row justify-content-center align-items-center">
-            <div className="triangle-left"></div>
             <Link
               to="/About"
               className="nav-menu-item shadow my-1"
@@ -44,7 +42,6 @@ export default function Navbar() {
           </div>
 
           <div className="d-flex flex-row justify-content-center align-items-center">
-            <div className="triangle-left"></div>
             <Link
               to="/Project"
               className="nav-menu-item shadow my-1"
